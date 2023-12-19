@@ -1,0 +1,548 @@
+* {
+    box-sizing: border-box;
+    margin: 0 auto;
+}
+
+body {
+    margin: 0 auto;
+    background-color: #000;
+    background-size: 65px;
+    color: #E3E3E4;
+    font-family: 'Barlow Semi Condensed', Arial, Helvetica, sans-serif;
+    font-size: 18px;
+}
+
+body::before {
+    content: "";
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 7rem;
+    background-color: #088A65; /* Grüne Hintergrundfarbe für den linken Bereich */
+    z-index: -1; /* Damit dieser Bereich hinter dem eigentlichen Inhalt liegt */
+}
+
+h3 {
+    font-size: 3rem;
+    line-height: 4rem;
+    margin: 0.5rem auto 0.5rem 7rem;
+}
+
+
+h4 {
+    font-size: 2rem;
+    line-height: 3rem;
+    margin: 0.5rem auto 0.5rem 7rem;
+}
+
+h5 {
+    font-size: 18px;
+}
+
+p {
+    margin-top: 18px;
+}
+
+#flex {
+    display: flex;
+}
+
+main {
+    width: 100%;
+    background-color: #000;
+    flex: 1;
+    order: 2;
+
+    background-image: url('/img/pexels-jeswin-thomas-15061977.jpg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: 50% 150%;
+}
+
+/* hero-ish section */
+.heroish {
+    display: flex;
+    min-height: 270px;
+    max-height: 750px;
+    max-width: 1042px;
+
+    flex-direction: column;
+    background-image: url('/img/mulder+scully.jpg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position-y: 20px;
+    background-position-x: right;
+    margin-top: 0.5rem;
+    margin-right: 0rem;
+    margin-bottom: 3rem;
+    margin-left: 7rem;
+}
+
+.textBox {
+    margin: 0;
+    text-align: left;
+    width: 40%;
+}
+
+.expertsText {
+    color: #69717B;
+    margin: 0;
+    max-width: 300px;
+}
+
+.theTruth { /* The Truth Is Out There */
+    font-size: 7rem;
+    line-height: 7.5rem;
+    font-family: 'Arvo', sans-serif;
+    margin: 0.5rem 0;
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateX(-100%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+.arrow {
+    margin: 2rem 0.5rem;
+}
+
+.arrow:hover {
+    transform: translateY(5px);
+    transition: 0.3s ease;
+}
+
+/* Services */
+.services {
+    display: flex;
+    flex-direction: row;
+    max-width: 1042px;
+
+    justify-content: space-between;
+    text-align: justify;
+    margin-top: 0.5rem;
+    margin-right: 0rem;
+    margin-bottom: 3rem;
+    margin-left: 7rem;    
+
+    animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fade {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.services h3 {
+    margin: 0;
+}
+
+.serviceDescription {
+    width: 40%;
+    max-width: 600px;
+    height: 100%;
+    margin: 0;
+    border: 1px solid #18395A;
+    border-radius: 10px;
+    padding: 0.5rem 2rem 2.5rem 2rem;
+    background-color: #18395A;
+}
+
+.serviceDetails {
+    width: 50%;
+    max-width: 600px;
+    margin-top: 6.5rem;
+}
+
+.serviceDetails ul {
+    margin-left: -25px;
+}
+
+/* about  the team */
+.about-inner {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    justify-content: center;
+    column-gap: 2rem;
+    margin: 0;
+    padding-bottom: 1rem;
+    max-width: 1042px;
+}
+
+.about {
+    background-color: #18395A;
+    width: 100%;
+    min-height: 100px;
+
+    margin-top: 0px;
+    margin-right: 0px;
+    margin-bottom: 3rem;
+    margin-left: 0px;
+    padding-left: 7rem;
+    padding-right: 4rem;
+    text-align: left;
+}
+
+.one, .two, .three, .four {
+    padding: 1rem 0;
+    max-width: 200px;
+}
+
+.about img {
+    width: 150px;
+    margin-bottom: 1rem;
+    padding: 5px;
+    background-color: #E3E3E4;
+}
+
+/* Blog */
+.blog-posts {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-columns: minmax(220px, 486px), 1fr 1fr;
+    grid-gap: 70px;
+    justify-content: space-between;
+
+    width: 100%;
+    max-width: 1042px;
+    padding: 0;
+    margin-left: 7rem;
+    margin-bottom: 100px;
+}
+
+.entry {
+    display: grid;
+    grid-template-columns: minmax(220px, 500px);
+    align-content: space-between;
+    background-color: white;
+    margin:0;
+    height: auto;
+    padding: 0;
+    text-align: justify;
+    text-justify: distribute;
+}
+
+.entry p {
+    margin: 26px;
+    color: #69717B;
+}
+
+.entry h5 {
+    margin: 26px 26px 0 26px;
+    text-align: left;
+    font-size: 18px;
+    line-height: 24px;
+    color: #000;
+}
+
+.entry-img img {
+    width: 486px;
+    height: 200px;
+    object-fit: cover;
+    background-color: #18395A;
+}
+
+.entry button {
+    display: block;
+    outline: none;
+    border: none;
+    width: 100%;
+    height: 60px;
+    padding: 15px;
+    margin-top: 20px;
+    margin-bottom: 0;
+    background-color: #69717B;
+    color: #E3E3E4;
+    cursor: pointer;
+}
+
+.entry button:hover {
+    background-color: #18395A;
+    transition: 0.5s ease;
+}
+
+/* sidebar */ 
+nav {
+    background-color: #088A65;
+    width: 7rem;
+    padding: 0.5rem;
+    min-height: 100%;
+
+    animation: fadeIn 3s ease;
+}
+
+/* Link-Liste */
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    min-width: 7rem;
+    max-width: 100%;
+
+    position: fixed;
+    transform: rotate(-90deg);
+    top: 350px;
+    left: -196px;
+}
+
+nav ul li {
+    text-decoration: none;
+    display: inline;
+    margin-left: 50px;
+    font-family: 'arvo';
+    font-size: 1.3rem;
+}
+
+nav li a {
+    color: #E3E3E4;
+    text-decoration: none;
+}
+
+nav li a:hover {
+    border-bottom: 5px solid #E3E3E4;
+    transition: 0.1s ease;
+}
+
+footer {
+    display: flex;
+    background: #088A65;
+    width: 100%;
+    height: 40px;
+    padding: 10px;
+}
+
+footer ul {
+    width: 100%;
+    max-width: 700px;
+    display:flex;
+    flex-direction: row;
+}
+
+footer ul li {
+    width: 100%;
+    list-style-type: none;
+    display: inline;
+}
+
+footer ul li a {
+    color: #E3E3E4;
+    text-decoration: none;
+}
+
+/* Media Query for mobile  devices */
+@media only screen and (max-width: 700px) {
+
+    body::before {
+        visibility: hidden;
+        background-color: #000;
+    }
+
+    h3 {
+        font-size: 2rem;
+        line-height: 2.5rem;
+    }
+
+    h3, h4, h5 {
+        margin: 0.5rem 1rem;
+    }
+
+    #flex {
+        flex-wrap: wrap;
+    }
+
+    nav {
+        width: 100%;
+    }
+
+    main {
+        order: 1;
+        height: 300px;
+        padding: 0px;
+        background-image: none;
+    }
+
+    .heroish {
+        margin: 1rem;
+        background-size: 90%;
+    }
+
+    .textBox {
+        width: 100%;   
+    }
+    
+    .expertsText {
+        font-size: 1.3rem;
+        text-align:  justify;
+        width: 100%;
+        white-space: nowrap;
+    }
+
+    .theTruth {
+        font-size: 1.9rem;
+        line-height: 2rem;
+        text-align: justify;
+    }
+
+    .services {
+        flex-direction: column;
+        margin: 1rem;
+    }
+
+    .serviceDescription, .serviceDetails {
+        width: 100%;
+        margin-top: 1.5rem;
+        margin-bottom: 1.5rem;
+        padding: 0.25rem;
+    }
+
+    .serviceDescription {
+        padding: 1rem;
+    }
+
+    .about {
+        padding: 1rem;
+    }
+
+    .about h5 {
+        margin: 0;
+    }
+
+    .about-inner {
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem;
+        padding: 0;
+    }
+
+    .about img {
+        width: 100px;
+    }
+
+    .one, .two, .three, .four {
+        width: 100%;
+        max-width: 250px;
+    }
+
+    .blog-posts {
+        grid-template-columns: 1fr;
+        grid-gap: 1rem;
+        width: 320px;
+        max-width: 400px;
+        margin-left: 1.3rem;
+    }
+
+    .entry-img img, .entry {
+        width: 320px;
+        max-width: 400px;
+        margin: 0;
+    }
+
+    nav ul {
+        list-style-type: none;
+        padding: 0;
+        text-align: center;
+    
+        position: relative;
+        transform: none;
+        top: auto;
+        left: auto;
+    }
+    
+    nav ul li {
+        text-decoration: none;
+        display: inline;
+        margin-right: 1rem;;
+        margin-left: 0;
+        font-size: 16px;
+    }
+
+    nav ul li:last-child {
+        margin: 0;
+    }
+
+    footer {
+        padding: 0;
+        margin: 0;
+        height: 50px;
+    }
+    
+    footer ul {
+        display: inline-block;
+        max-width: 400px;
+        max-height: 80px;;
+        margin: 0;
+        padding: 1rem 0.5rem;
+        font-size: small;
+    }
+
+    footer ul li {
+        margin: 0 0.5rem;
+    }
+}
+
+/* Media Query just for tablets */
+@media only screen and (min-width: 701px) and (max-width: 1024px) {
+    h4 {
+        margin-left: 3rem;
+    }
+
+    main {
+        background-image: url('/img/pexels-jeswin-thomas-15061977.jpg');
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: 50% 110%;
+    }
+    
+    .heroish {
+        margin-left: 3rem;
+        max-width: 700px;
+    }
+
+    .expertsText {
+        font-size: 1.3rem; 
+        margin-bottom: 0.5rem;
+    }
+
+    .theTruth {
+        font-size: 3.5rem;
+        line-height: 4rem;
+    }
+
+    .services {
+        flex-direction: column;
+        margin-left: 0px;
+        margin-right: 0px;
+    }
+
+    .serviceDetails, .serviceDescription {
+        width: 100%;
+        max-width: 700px;
+        margin-top: 1rem;
+        margin-left: 3rem;
+        margin-right: 0;
+    }
+
+    .about {
+        padding-left: 3rem;
+    }
+
+    .blog-posts {
+        grid-template-columns: 1fr 1fr;
+        width: 100%;
+        max-width: 700px;
+        margin-left: 3rem;
+    }
+
+    .entry img, .entry {
+        width: 300px;
+        margin: 0;
+    }
+}
+
