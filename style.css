@@ -499,7 +499,7 @@ footer li a:hover {
     }
 
     main {
-        background-image: url('img/pexels-jeswin-thomas-15061977.jpg');
+        background-image: url('./img/pexels-jeswin-thomas-15061977.jpg');
         background-repeat: no-repeat;
         background-size: contain;
         background-position: 50% 110%;
