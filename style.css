@@ -55,7 +55,7 @@ main {
     flex: 1;
     order: 2;
 
-    background-image: url('./img/pexels-jeswin-thomas-15061977.jpg');
+    background-image: url('img/pexels-jeswin-thomas-15061977.jpg');
     background-repeat: no-repeat;
     background-size: contain;
     background-position: 50% 150%;
@@ -69,7 +69,7 @@ main {
     max-width: 1042px;
 
     flex-direction: column;
-    background-image: url('./img/mulder+scully.jpg');
+    background-image: url('img/mulder+scully.jpg');
     background-repeat: no-repeat;
     background-size: contain;
     background-position-y: 20px;
@@ -499,7 +499,7 @@ footer li a:hover {
     }
 
     main {
-        background-image: url('./img/pexels-jeswin-thomas-15061977.jpg');
+        background-image: url('img/pexels-jeswin-thomas-15061977.jpg');
         background-repeat: no-repeat;
         background-size: contain;
         background-position: 50% 110%;
