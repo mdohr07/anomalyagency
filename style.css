@@ -322,12 +322,12 @@ footer {
 footer ul {
     width: 100%;
     max-width: 700px;
-    display:flex;
+    display: flex;
     flex-direction: row;
+    margin: 0px 15%;
 }
 
 footer ul li {
-    width: 100%;
     list-style-type: none;
     display: inline;
 }
@@ -335,6 +335,11 @@ footer ul li {
 footer ul li a {
     color: #E3E3E4;
     text-decoration: none;
+}
+
+footer li a:hover {
+    border-bottom: 5px solid #E3E3E4;
+    transition: 0.1s ease;
 }
 
 /* Media Query for mobile  devices */
@@ -543,6 +548,10 @@ footer ul li a {
     .entry img, .entry {
         width: 300px;
         margin: 0;
+    }
+
+    footer ul {
+        margin: 0%;
     }
 }
 
