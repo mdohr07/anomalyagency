@@ -555,3 +555,13 @@ footer li a:hover {
     }
 }
 
+/* CSS for transition */
+.hidden {
+    opacity: 0;
+    transition: all 1s;
+}
+
+.show {
+    opacity: 1;
+}
+
